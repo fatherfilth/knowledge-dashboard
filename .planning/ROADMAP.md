@@ -48,10 +48,10 @@ Plans:
   3. All 6 category folders (models, tools, skills, repos, agents, projects) are accessible
   4. Frontmatter is parsed and validated against Zod schema for all articles
   5. Files in docs/_templates/ and docs/_index/ are excluded from content
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md -- GitHub API client, Zod schema, content pipeline, and end-to-end verification
 
 ### Phase 3: Routing & Static Generation
 **Goal**: Next.js generates static pages for all categories and articles at build time
@@ -145,12 +145,12 @@ Plans:
 ## Progress
 
 **Execution Order:**
-Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
+Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Foundation | 2/2 | ✓ Complete | 2026-02-14 |
-| 2. Data Infrastructure | 0/0 | Not started | - |
+| 1. Project Foundation | 2/2 | Complete | 2026-02-14 |
+| 2. Data Infrastructure | 0/1 | In progress | - |
 | 3. Routing & Static Generation | 0/0 | Not started | - |
 | 4. Article Reader | 0/0 | Not started | - |
 | 5. Category Navigation | 0/0 | Not started | - |
