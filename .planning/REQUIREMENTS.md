@@ -1,0 +1,125 @@
+# Requirements: Knowledge Dashboard
+
+**Defined:** 2026-02-14
+**Core Value:** Your brother can quickly find and read any article in your AI documentation library
+
+## v1 Requirements
+
+Requirements for initial release. Each maps to roadmap phases.
+
+### Data Infrastructure
+
+- [ ] **DATA-01**: Site fetches all markdown files from fatherfilth/AI-Documentation-Library via GitHub API at build time
+- [ ] **DATA-02**: Frontmatter (title, status, category, slug, created, updated, author, tags) is parsed and validated with Zod schema
+- [ ] **DATA-03**: GitHub API requests use authenticated token to avoid rate limiting
+- [ ] **DATA-04**: Build completes successfully with all content from 6 category folders (models, tools, skills, repos, agents, projects)
+- [ ] **DATA-05**: Files in docs/_templates/ and docs/_index/ are excluded from content
+
+### Content Display
+
+- [ ] **DISP-01**: User can read full article rendered from MDX with clean typography
+- [ ] **DISP-02**: Code blocks in articles have syntax highlighting
+- [ ] **DISP-03**: Articles display color-coded status badges (in-progress = yellow, complete = green, stable = blue)
+- [ ] **DISP-04**: Articles display frontmatter metadata (created date, updated date, author, tags)
+
+### Navigation
+
+- [ ] **NAV-01**: Homepage shows a grid of all 6 categories with article counts
+- [ ] **NAV-02**: User can click a category to see all articles in that category as cards
+- [ ] **NAV-03**: Article cards show title, status badge, date, tags, and content preview
+- [ ] **NAV-04**: User can click an article card to open the full reader view
+- [ ] **NAV-05**: Each article has a unique shareable URL based on category and slug
+- [ ] **NAV-06**: Category pages sort articles by popularity (most-referenced/most-updated first)
+
+### Search & Discovery
+
+- [ ] **SRCH-01**: User can search across all articles by keyword using Fuse.js
+- [ ] **SRCH-02**: Search matches against title, tags, and content
+- [ ] **SRCH-03**: Search results display with article cards
+- [ ] **SRCH-04**: User can browse articles by tag across all categories
+- [ ] **SRCH-05**: Article pages show related articles based on tag overlap
+
+### Design
+
+- [ ] **DSGN-01**: Site is responsive — works on mobile and desktop
+- [ ] **DSGN-02**: Site has dark mode
+- [ ] **DSGN-03**: Site is styled with Tailwind CSS
+
+### Deployment
+
+- [ ] **DEPL-01**: Site deploys to Vercel
+- [ ] **DEPL-02**: Site builds and deploys successfully with static generation
+
+## v2 Requirements
+
+Deferred to future release. Tracked but not in current roadmap.
+
+### Content Display
+
+- **DISP-05**: Auto-generated table of contents from markdown headings
+- **DISP-06**: Metadata display (dates, author) on article cards
+
+### Navigation
+
+- **NAV-07**: Quick stats dashboard on homepage (article counts by status)
+- **NAV-08**: Keyboard shortcuts (/ for search, j/k navigation)
+
+### Infrastructure
+
+- **DATA-06**: Incremental Static Regeneration for content freshness without full rebuilds
+- **DATA-07**: GitHub webhook triggers auto-rebuild on content repo changes
+
+## Out of Scope
+
+| Feature | Reason |
+|---------|--------|
+| Content editing in browser | Content managed in separate GitHub repo via VS Code/GitHub |
+| User authentication | Single-user personal site — no accounts needed |
+| Comments or discussion | Personal reference tool, not social |
+| Database | Markdown files are the database — no Postgres/MongoDB |
+| Real-time collaboration | Not applicable for read-only dashboard |
+| Analytics | Personal project — no metrics needed |
+| Git history view | High complexity, defer to v2+ |
+| Backlinks | Requires link parsing infrastructure, defer |
+| Reading progress tracking | Nice-to-have, not essential for single user |
+
+## Traceability
+
+Which phases cover which requirements. Updated during roadmap creation.
+
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| DATA-01 | — | Pending |
+| DATA-02 | — | Pending |
+| DATA-03 | — | Pending |
+| DATA-04 | — | Pending |
+| DATA-05 | — | Pending |
+| DISP-01 | — | Pending |
+| DISP-02 | — | Pending |
+| DISP-03 | — | Pending |
+| DISP-04 | — | Pending |
+| NAV-01 | — | Pending |
+| NAV-02 | — | Pending |
+| NAV-03 | — | Pending |
+| NAV-04 | — | Pending |
+| NAV-05 | — | Pending |
+| NAV-06 | — | Pending |
+| SRCH-01 | — | Pending |
+| SRCH-02 | — | Pending |
+| SRCH-03 | — | Pending |
+| SRCH-04 | — | Pending |
+| SRCH-05 | — | Pending |
+| DSGN-01 | — | Pending |
+| DSGN-02 | — | Pending |
+| DSGN-03 | — | Pending |
+| DEPL-01 | — | Pending |
+| DEPL-02 | — | Pending |
+
+**Coverage:**
+- v1 requirements: 25 total
+- Mapped to phases: 0
+- Unmapped: 25 ⚠️
+
+---
+*Requirements defined: 2026-02-14*
+*Last updated: 2026-02-14 after initial definition*
