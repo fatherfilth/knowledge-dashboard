@@ -63,10 +63,10 @@ Plans:
   3. Article routes (/[category]/[slug]) exist for all articles
   4. Build completes successfully with all routes generated statically
   5. All routes have unique, shareable URLs based on category and slug
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md -- App Router routes with generateStaticParams for categories and articles
 
 ### Phase 4: Article Reader
 **Goal**: User can read any article with clean formatting, syntax highlighting, and metadata display
@@ -151,7 +151,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 |-------|----------------|--------|-----------|
 | 1. Project Foundation | 2/2 | Complete | 2026-02-14 |
 | 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
-| 3. Routing & Static Generation | 0/0 | Not started | - |
+| 3. Routing & Static Generation | 0/1 | In Progress | - |
 | 4. Article Reader | 0/0 | Not started | - |
 | 5. Category Navigation | 0/0 | Not started | - |
 | 6. Search Implementation | 0/0 | Not started | - |
