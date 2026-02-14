@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 2 of 8 (Data Infrastructure)
+Phase: 3 of 8 (Routing and Static Generation)
 Plan: 1 of 1 completed
 Status: Complete
-Last activity: 2026-02-14 — Completed plan 02-01: Data infrastructure with GitHub API, gray-matter, and Zod validation
+Last activity: 2026-02-15 — Completed plan 03-01: Complete App Router route structure with build-time static generation for homepage, 6 category pages, and ~16 article pages using Next.js 16 async params
 
-Progress: [███░░░░░░░] 37.5% (3 of 8 phase plans completed)
+Progress: [████░░░░░░] 50.0% (4 of 8 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 12 min
-- Total execution time: 0.70 hours
+- Total plans completed: 4
+- Average duration: 10 min
+- Total execution time: 0.73 hours
 
 **By Phase:**
 
@@ -29,10 +29,11 @@ Progress: [███░░░░░░░] 37.5% (3 of 8 phase plans completed)
 |-------|-------|-------|----------|
 | 01-project-foundation | 2 | 16 min | 8 min |
 | 02-data-infrastructure | 1 | 26 min | 26 min |
+| 03-routing-static-generation | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (11 min), 01-02 (5 min), 02-01 (26 min)
-- Trend: Phase 02 complete - data infrastructure established
+- Last 5 plans: 01-01 (11 min), 01-02 (5 min), 02-01 (26 min), 03-01 (2 min)
+- Trend: Phase 03 complete - routing infrastructure established with exceptional speed (2 min)
 
 *Updated after each plan completion*
 
@@ -58,6 +59,10 @@ Recent decisions affecting current work:
 - z.coerce.date() for frontmatter dates — handles gray-matter's automatic Date parsing (from 02-01)
 - Unauthenticated mode allowed for local dev — warns about rate limits, works without token (from 02-01)
 - Verification via Next.js build — workaround for tsx/octokit module resolution issues (from 02-01)
+- Bottom-up generateStaticParams pattern — article routes return both category and slug params together to avoid partial params pitfall (from 03-01)
+- Next.js 16 async params — all page components and generateMetadata functions await params (breaking change from Next.js 15) (from 03-01)
+- dynamicParams=false on all dynamic routes — only pre-generated routes are valid, all others 404 (from 03-01)
+- Minimal styling placeholder — raw markdown in <pre> block deferred to Phase 4 MDX rendering (from 03-01)
 
 ### Pending Todos
 
@@ -73,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-14 (plan 02-01 execution)
-Stopped at: Completed 02-01-PLAN.md, Phase 02 complete, data infrastructure ready for Phase 03
+Last session: 2026-02-15 (plan 03-01 execution)
+Stopped at: Completed 03-01-PLAN.md, Phase 03 complete, routing infrastructure ready for Phase 04 (Content Rendering)
 Resume file: None
