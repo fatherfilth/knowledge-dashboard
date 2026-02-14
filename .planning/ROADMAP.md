@@ -32,10 +32,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Site builds successfully with `npm run build` and generates static output
   3. Site deploys to Vercel with automatic builds on git push
   4. All package versions are verified and compatible (Next.js, Tailwind, TypeScript)
-**Plans**: TBD
+**Plans:** 2 plans
 
 Plans:
-- [ ] 01-01: TBD
+- [ ] 01-01-PLAN.md -- Initialize Next.js 15 project with tooling and styled Ryder.AI landing page
+- [ ] 01-02-PLAN.md -- Deploy to Vercel via GitHub integration and verify pipeline
 
 ### Phase 2: Data Infrastructure
 **Goal**: Site reliably fetches and parses all content from GitHub repository with validated schema
