@@ -12,7 +12,7 @@ This roadmap transforms a GitHub repository of markdown documentation into a bro
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Project Foundation** - Next.js setup, deployment pipeline, and tech stack verification
+- [x] **Phase 1: Project Foundation** - Next.js setup, deployment pipeline, and tech stack verification
 - [ ] **Phase 2: Data Infrastructure** - GitHub API integration with authentication and content parsing
 - [ ] **Phase 3: Routing & Static Generation** - App Router structure and build-time page generation
 - [ ] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
@@ -35,8 +35,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans:** 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- Initialize Next.js 15 project with tooling and styled Ryder.AI landing page
-- [ ] 01-02-PLAN.md -- Deploy to Vercel via GitHub integration and verify pipeline
+- [x] 01-01-PLAN.md -- Initialize Next.js 15 project with tooling and styled Ryder.AI landing page
+- [x] 01-02-PLAN.md -- Deploy to Vercel via GitHub integration and verify pipeline
 
 ### Phase 2: Data Infrastructure
 **Goal**: Site reliably fetches and parses all content from GitHub repository with validated schema
@@ -149,7 +149,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Project Foundation | 0/0 | Not started | - |
+| 1. Project Foundation | 2/2 | ✓ Complete | 2026-02-14 |
 | 2. Data Infrastructure | 0/0 | Not started | - |
 | 3. Routing & Static Generation | 0/0 | Not started | - |
 | 4. Article Reader | 0/0 | Not started | - |
