@@ -13,7 +13,7 @@ This roadmap transforms a GitHub repository of markdown documentation into a bro
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Project Foundation** - Next.js setup, deployment pipeline, and tech stack verification
-- [ ] **Phase 2: Data Infrastructure** - GitHub API integration with authentication and content parsing
+- [x] **Phase 2: Data Infrastructure** - GitHub API integration with authentication and content parsing
 - [ ] **Phase 3: Routing & Static Generation** - App Router structure and build-time page generation
 - [ ] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
 - [ ] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
@@ -51,7 +51,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md -- GitHub API client, Zod schema, content pipeline, and end-to-end verification
+- [x] 02-01-PLAN.md -- GitHub API client, Zod schema, content pipeline, and end-to-end verification
 
 ### Phase 3: Routing & Static Generation
 **Goal**: Next.js generates static pages for all categories and articles at build time
@@ -150,7 +150,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Project Foundation | 2/2 | Complete | 2026-02-14 |
-| 2. Data Infrastructure | 0/1 | In progress | - |
+| 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
 | 3. Routing & Static Generation | 0/0 | Not started | - |
 | 4. Article Reader | 0/0 | Not started | - |
 | 5. Category Navigation | 0/0 | Not started | - |
