@@ -89,37 +89,37 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | — | Pending |
-| DATA-02 | — | Pending |
-| DATA-03 | — | Pending |
-| DATA-04 | — | Pending |
-| DATA-05 | — | Pending |
-| DISP-01 | — | Pending |
-| DISP-02 | — | Pending |
-| DISP-03 | — | Pending |
-| DISP-04 | — | Pending |
-| NAV-01 | — | Pending |
-| NAV-02 | — | Pending |
-| NAV-03 | — | Pending |
-| NAV-04 | — | Pending |
-| NAV-05 | — | Pending |
-| NAV-06 | — | Pending |
-| SRCH-01 | — | Pending |
-| SRCH-02 | — | Pending |
-| SRCH-03 | — | Pending |
-| SRCH-04 | — | Pending |
-| SRCH-05 | — | Pending |
-| DSGN-01 | — | Pending |
-| DSGN-02 | — | Pending |
-| DSGN-03 | — | Pending |
-| DEPL-01 | — | Pending |
-| DEPL-02 | — | Pending |
+| DATA-01 | Phase 2 | Pending |
+| DATA-02 | Phase 2 | Pending |
+| DATA-03 | Phase 2 | Pending |
+| DATA-04 | Phase 2 | Pending |
+| DATA-05 | Phase 2 | Pending |
+| DISP-01 | Phase 4 | Pending |
+| DISP-02 | Phase 4 | Pending |
+| DISP-03 | Phase 4 | Pending |
+| DISP-04 | Phase 4 | Pending |
+| NAV-01 | Phase 5 | Pending |
+| NAV-02 | Phase 5 | Pending |
+| NAV-03 | Phase 5 | Pending |
+| NAV-04 | Phase 5 | Pending |
+| NAV-05 | Phase 3 | Pending |
+| NAV-06 | Phase 5 | Pending |
+| SRCH-01 | Phase 6 | Pending |
+| SRCH-02 | Phase 6 | Pending |
+| SRCH-03 | Phase 6 | Pending |
+| SRCH-04 | Phase 7 | Pending |
+| SRCH-05 | Phase 7 | Pending |
+| DSGN-01 | Phase 8 | Pending |
+| DSGN-02 | Phase 8 | Pending |
+| DSGN-03 | Phase 5 | Pending |
+| DEPL-01 | Phase 1 | Pending |
+| DEPL-02 | Phase 1 | Pending |
 
 **Coverage:**
 - v1 requirements: 25 total
-- Mapped to phases: 0
-- Unmapped: 25 ⚠️
+- Mapped to phases: 25
+- Unmapped: 0 ✓
 
 ---
 *Requirements defined: 2026-02-14*
-*Last updated: 2026-02-14 after initial definition*
+*Last updated: 2026-02-14 after roadmap creation*
