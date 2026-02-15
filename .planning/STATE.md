@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 7 of 8 (Tag Discovery)
-Plan: 1 of 1 completed
-Status: Complete
-Last activity: 2026-02-15 — Completed plan 07-01: Tag-based cross-category browsing with /tags/[tag] pages and related article recommendations using Set intersection for tag overlap scoring
+Phase: 8 of 8 (Design Polish)
+Plan: 1 of 4 completed
+Status: In Progress
+Last activity: 2026-02-15 — Completed plan 08-01: Design system foundation with Tailwind CSS 4 theme, Cabinet Grotesk/Satoshi fonts, glass navbar, and pill-shaped status badges
 
-Progress: [████████░░] 100% (8 of 8 phase plans completed)
+Progress: [█████████░] 82% (9 of 11 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 8 min
-- Total execution time: 1.2 hours
+- Total execution time: 1.3 hours
 
 **By Phase:**
 
@@ -34,10 +34,11 @@ Progress: [████████░░] 100% (8 of 8 phase plans completed)
 | 05-category-navigation | 1 | 2 min | 2 min |
 | 06-search-implementation | 1 | 9 min | 9 min |
 | 07-tag-discovery | 1 | 12 min | 12 min |
+| 08-design-polish | 1 | 5 min | 5 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (4 min), 05-01 (2 min), 06-01 (9 min), 07-01 (12 min)
-- Trend: Phase 07 complete - tag-based browsing with dynamic routes, related articles via tag overlap (12 min)
+- Last 5 plans: 05-01 (2 min), 06-01 (9 min), 07-01 (12 min), 08-01 (5 min)
+- Trend: Phase 08 started - design system foundation with Tailwind theme and glass navbar (5 min)
 
 *Updated after each plan completion*
 
@@ -54,7 +55,7 @@ Recent decisions affecting current work:
 - Category pages as primary nav — matches content organization in source repo
 - Next.js 16.1.6 with App Router and Turbopack — latest stable version for optimal performance (from 01-01)
 - Tailwind CSS 4 with CSS-based @theme configuration — modern CSS architecture (from 01-01)
-- Inter font from Google Fonts — minimal modern typography (from 01-01)
+- Cabinet Grotesk and Satoshi fonts from Fontshare — replaced Inter for display and body typography (from 08-01)
 - Site name: Ryder.AI with Linear/Raycast design — locked design direction (from 01-01)
 - Vercel as hosting platform — automatic GitHub-triggered deployments (from 01-02)
 - Auto-deploy enabled for main branch — continuous deployment workflow (from 01-02)
@@ -67,7 +68,7 @@ Recent decisions affecting current work:
 - Next.js 16 async params — all page components and generateMetadata functions await params (breaking change from Next.js 15) (from 03-01)
 - dynamicParams=false on all dynamic routes — only pre-generated routes are valid, all others 404 (from 03-01)
 - Minimal styling placeholder — raw markdown in <pre> block deferred to Phase 4 MDX rendering (from 03-01)
-- next-mdx-remote/rsc for remote content — runtime MDX compilation, not @next/mdx for local files (from 04-01)
+- unified + remark + rehype pipeline for markdown rendering — replaced next-mdx-remote to avoid MDX interpreting < > { } as JSX (from 04-01, updated post-phase)
 - rehype-pretty-code with github-dark-dimmed theme — syntax highlighting for code blocks (from 04-01)
 - Tailwind typography plugin via @plugin directive — Tailwind 4 uses CSS-based configuration, not JS config (from 04-01)
 - Responsive prose classes (prose-sm md:prose-base lg:prose-lg) — mobile-first typography scaling (from 04-01)
@@ -83,7 +84,10 @@ Recent decisions affecting current work:
 - Tag slug normalization — lowercase + hyphens for URL-safe routing, preserves original casing for display (from 07-01)
 - Set intersection for tag overlap — O(1) lookup performance for related articles calculation (from 07-01)
 - Conditional component rendering — return null pattern for empty states (no empty headings) (from 07-01)
-- z-10 tag positioning with stopPropagation — prevents card navigation when clicking tags (from 07-01)
+- z-10 tag positioning — prevents card navigation when clicking tags; CSS-only approach (z-10 over pseudo-element overlay) since onClick is incompatible with Server Components (from 07-01, updated post-phase)
+- [Phase 08-01]: Tailwind CSS 4 @theme directive for design tokens - CSS-native configuration is 5x faster than JS config
+- [Phase 08-01]: External Fontshare font loading via CDN - Cabinet Grotesk and Satoshi not available via next/font
+- [Phase 08-01]: Dark-only theme (no light mode toggle) - Reference design only defines dark palette, light mode deferred
 
 ### Pending Todos
 
@@ -93,12 +97,12 @@ None yet.
 
 **From Research:**
 - GitHub API rate limiting could cause build failures (addressed in Phase 2 with authenticated requests)
-- MDX memory issues during builds (addressed in Phase 3 with batch processing)
+- ~~MDX memory issues during builds~~ — eliminated by replacing MDX with plain markdown rendering via unified pipeline
 - YAML frontmatter type inconsistencies (addressed in Phase 2 with Zod validation)
 - Search index bundle bloat (addressed in Phase 6 with lazy loading)
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 07-01 execution)
-Stopped at: Completed 07-01-PLAN.md, Phase 07 complete, tag discovery implemented and ready for Phase 08 (Design Polish)
+Last session: 2026-02-15 (plan 08-01 execution)
+Stopped at: Completed 08-01-PLAN.md, Phase 08 in progress, design system foundation established with dark theme and glass navbar
 Resume file: None
