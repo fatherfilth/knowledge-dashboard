@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Article } from "@/types/content";
 import { StatusBadge } from "./StatusBadge";
+import { tagToSlug } from "@/lib/tags";
 
 interface ArticleCardProps {
   article: Article;
@@ -31,12 +32,14 @@ export function ArticleCard({ article }: ArticleCardProps) {
       {article.tags && article.tags.length > 0 && (
         <div className="mb-3 flex flex-wrap gap-2">
           {article.tags.slice(0, 3).map((tag) => (
-            <span
+            <Link
               key={tag}
-              className="rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600"
+              href={`/tags/${tagToSlug(tag)}`}
+              className="relative z-10 rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 hover:bg-gray-200"
+              onClick={(e) => e.stopPropagation()}
             >
               {tag}
-            </span>
+            </Link>
           ))}
           {article.tags.length > 3 && (
             <span className="text-xs text-gray-400">
