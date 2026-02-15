@@ -36,7 +36,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
               key={tag}
               href={`/tags/${tagToSlug(tag)}`}
               className="relative z-10 rounded-full bg-gray-100 px-2 py-1 text-xs text-gray-600 hover:bg-gray-200"
-              onClick={(e) => e.stopPropagation()}
+
             >
               {tag}
             </Link>
