@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { fetchAllArticles, fetchCategoryArticles } from "@/lib/content";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import rehypePrettyCode from "rehype-pretty-code";
+import remarkGfm from "remark-gfm";
+import { ArticleMetadata } from "@/components/ui/ArticleMetadata";
 
 export const dynamicParams = false;
 
@@ -63,35 +67,28 @@ export default async function ArticlePage({
         </Link>
       </div>
 
-      <article className="prose prose-gray max-w-none">
+      <article>
         <h1 className="mb-4 text-4xl font-bold tracking-tight text-gray-900">
           {article.title}
         </h1>
 
-        <div className="mb-8 flex flex-wrap items-center gap-3 text-sm text-gray-600">
-          <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium">
-            {article.status}
-          </span>
-          <span>Category: {category}</span>
-          <span>Created: {article.created.toLocaleDateString()}</span>
-          {article.updated && (
-            <span>Updated: {article.updated.toLocaleDateString()}</span>
-          )}
-        </div>
+        <ArticleMetadata article={article} />
 
-        {article.tags && article.tags.length > 0 && (
-          <div className="mb-8">
-            <span className="text-sm text-gray-600">Tags: </span>
-            <span className="text-sm text-gray-900">
-              {article.tags.join(", ")}
-            </span>
-          </div>
-        )}
-
-        <div className="rounded-lg bg-gray-50 p-6">
-          <pre className="whitespace-pre-wrap font-mono text-sm text-gray-800">
-            {article.content}
-          </pre>
+        <div className="prose prose-gray prose-sm md:prose-base lg:prose-lg max-w-none">
+          <MDXRemote
+            source={article.content}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [remarkGfm],
+                rehypePlugins: [
+                  [
+                    rehypePrettyCode,
+                    { theme: "github-dark-dimmed", keepBackground: true },
+                  ],
+                ],
+              },
+            }}
+          />
         </div>
       </article>
     </div>
