@@ -20,25 +20,25 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
   const articles = await fetchAllArticles();
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12">
-      <div className="mb-8">
-        <Link
-          href="/"
-          className="mb-6 inline-block text-sm text-gray-600 hover:text-gray-900"
-        >
-          ← Back to Home
-        </Link>
-        <h1 className="mb-2 text-3xl font-bold text-gray-900">
-          Search Articles
-        </h1>
-        {query && (
-          <p className="text-sm text-gray-600">
-            Searching for &apos;{query}&apos;
-          </p>
-        )}
-      </div>
+    <div className="mx-auto max-w-7xl px-6 py-12">
+      <Link
+        href="/"
+        className="mb-8 inline-flex items-center gap-2 rounded-pill border border-white/[0.08] bg-glass px-4 py-2 text-sm font-medium text-teal backdrop-blur-sm transition-colors hover:border-teal/50 hover:bg-teal/10"
+      >
+        <span aria-hidden="true">←</span>
+        Back to Home
+      </Link>
 
-      <div className="mb-8">
+      <h1 className="mb-2 font-display text-3xl font-bold tracking-tight text-primary">
+        Search Articles
+      </h1>
+      {query && (
+        <p className="mb-8 text-sm text-muted">
+          Searching for &apos;{query}&apos;
+        </p>
+      )}
+
+      <div className="mb-8 max-w-xl">
         <Suspense fallback={<div className="h-10" />}>
           <SearchBar />
         </Suspense>

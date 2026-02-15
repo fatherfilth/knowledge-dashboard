@@ -41,7 +41,7 @@ export function SearchBar() {
     <div className="relative w-full max-w-md">
       <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
         <svg
-          className="h-4 w-4 text-gray-400"
+          className="h-4 w-4 text-muted"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export function SearchBar() {
       <input
         ref={inputRef}
         type="search"
-        className="block w-full rounded-lg border border-gray-200 py-2 pl-10 pr-3 text-sm focus:border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-300"
+        className="block w-full rounded-lg border border-white/[0.08] bg-glass py-2 pl-10 pr-3 text-sm text-primary backdrop-blur-sm placeholder:text-muted focus:border-teal/50 focus:outline-none focus:ring-1 focus:ring-teal/50"
         placeholder="Search articles..."
         aria-label="Search articles"
         defaultValue={searchParams.get("q")?.toString()}

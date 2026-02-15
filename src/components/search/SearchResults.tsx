@@ -50,29 +50,29 @@ export function SearchResults({ query, articles }: SearchResultsProps) {
 
   // Loading state
   if (isLoading) {
-    return <p className="text-gray-500">Searching...</p>;
+    return <p className="text-muted">Searching...</p>;
   }
 
   // No query - show prompt
   if (!query) {
     return (
-      <p className="text-gray-500">Enter a search term to find articles</p>
+      <p className="text-muted">Enter a search term to find articles</p>
     );
   }
 
   // No results found
   if (results.length === 0) {
     return (
-      <div className="text-gray-500">
+      <div className="text-muted">
         <p className="mb-2">No articles found for &apos;{query}&apos;</p>
         <p className="text-sm">Try different keywords or check your spelling</p>
       </div>
     );
   }
 
-  // Render results grid
+  // Render results list
   return (
-    <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+    <div className="space-y-3">
       {results.map((article) => (
         <ArticleCard key={article.slug} article={article} />
       ))}
