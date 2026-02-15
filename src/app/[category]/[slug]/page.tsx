@@ -1,10 +1,12 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { fetchAllArticles, fetchCategoryArticles } from "@/lib/content";
+import { getRelatedArticles } from "@/lib/tags";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 import { ArticleMetadata } from "@/components/ui/ArticleMetadata";
+import { RelatedArticles } from "@/components/ui/RelatedArticles";
 
 export const dynamicParams = false;
 
@@ -56,6 +58,8 @@ export default async function ArticlePage({
   const capitalizedCategory =
     category.charAt(0).toUpperCase() + category.slice(1);
 
+  const relatedArticles = await getRelatedArticles(article, 3);
+
   return (
     <div className="mx-auto max-w-4xl px-6 py-12">
       <div className="mb-8">
@@ -79,6 +83,7 @@ export default async function ArticlePage({
             source={article.content}
             options={{
               mdxOptions: {
+                format: "md",
                 remarkPlugins: [remarkGfm],
                 rehypePlugins: [
                   [
@@ -91,6 +96,8 @@ export default async function ArticlePage({
           />
         </div>
       </article>
+
+      <RelatedArticles articles={relatedArticles} />
     </div>
   );
 }
