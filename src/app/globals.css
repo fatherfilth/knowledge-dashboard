@@ -3,3 +3,5 @@
 @theme inline {
   --font-sans: var(--font-inter);
 }
+
+@plugin "@tailwindcss/typography";
