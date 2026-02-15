@@ -93,10 +93,10 @@ Plans:
   3. Article cards show title, status badge, date, tags, and content preview
   4. User can click an article card to open the full reader view
   5. Category pages sort articles by updated date (most recent first)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 05-01: TBD
+- [ ] 05-01-PLAN.md -- ArticleCard component and category page upgrade to card grid with date sorting
 
 ### Phase 6: Search Implementation
 **Goal**: User can search across all articles by keyword with fuzzy matching
@@ -153,7 +153,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
 | 4. Article Reader | 1/1 | Complete | 2026-02-15 |
-| 5. Category Navigation | 0/0 | Not started | - |
+| 5. Category Navigation | 0/1 | Not started | - |
 | 6. Search Implementation | 0/0 | Not started | - |
 | 7. Tag Discovery | 0/0 | Not started | - |
 | 8. Design Polish | 0/0 | Not started | - |
