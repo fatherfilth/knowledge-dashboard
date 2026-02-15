@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 3 of 8 (Routing and Static Generation)
+Phase: 4 of 8 (Article Reader)
 Plan: 1 of 1 completed
 Status: Complete
-Last activity: 2026-02-15 — Completed plan 03-01: Complete App Router route structure with build-time static generation for homepage, 6 category pages, and ~16 article pages using Next.js 16 async params
+Last activity: 2026-02-15 — Completed plan 04-01: MDX rendering with syntax-highlighted code blocks, color-coded status badges (yellow/green/blue), and responsive typography scaling from mobile to desktop
 
-Progress: [████░░░░░░] 50.0% (4 of 8 phase plans completed)
+Progress: [█████░░░░░] 62.5% (5 of 8 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 10 min
-- Total execution time: 0.73 hours
+- Total plans completed: 5
+- Average duration: 9 min
+- Total execution time: 0.80 hours
 
 **By Phase:**
 
@@ -30,10 +30,11 @@ Progress: [████░░░░░░] 50.0% (4 of 8 phase plans completed)
 | 01-project-foundation | 2 | 16 min | 8 min |
 | 02-data-infrastructure | 1 | 26 min | 26 min |
 | 03-routing-static-generation | 1 | 2 min | 2 min |
+| 04-article-reader | 1 | 4 min | 4 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (11 min), 01-02 (5 min), 02-01 (26 min), 03-01 (2 min)
-- Trend: Phase 03 complete - routing infrastructure established with exceptional speed (2 min)
+- Last 5 plans: 01-02 (5 min), 02-01 (26 min), 03-01 (2 min), 04-01 (4 min)
+- Trend: Phase 04 complete - article reader with MDX rendering and syntax highlighting (4 min)
 
 *Updated after each plan completion*
 
@@ -63,6 +64,10 @@ Recent decisions affecting current work:
 - Next.js 16 async params — all page components and generateMetadata functions await params (breaking change from Next.js 15) (from 03-01)
 - dynamicParams=false on all dynamic routes — only pre-generated routes are valid, all others 404 (from 03-01)
 - Minimal styling placeholder — raw markdown in <pre> block deferred to Phase 4 MDX rendering (from 03-01)
+- next-mdx-remote/rsc for remote content — runtime MDX compilation, not @next/mdx for local files (from 04-01)
+- rehype-pretty-code with github-dark-dimmed theme — syntax highlighting for code blocks (from 04-01)
+- Tailwind typography plugin via @plugin directive — Tailwind 4 uses CSS-based configuration, not JS config (from 04-01)
+- Responsive prose classes (prose-sm md:prose-base lg:prose-lg) — mobile-first typography scaling (from 04-01)
 
 ### Pending Todos
 
@@ -78,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 03-01 execution)
-Stopped at: Completed 03-01-PLAN.md, Phase 03 complete, routing infrastructure ready for Phase 04 (Content Rendering)
+Last session: 2026-02-15 (plan 04-01 execution)
+Stopped at: Completed 04-01-PLAN.md, Phase 04 complete, article reader ready for Phase 05 (Search and Filter)
 Resume file: None
