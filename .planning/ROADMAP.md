@@ -108,10 +108,10 @@ Plans:
   3. Search matches against article title, content, and tags
   4. Search results display as article cards
   5. Search uses fuzzy matching (tolerates typos and partial matches)
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 06-01: TBD
+- [ ] 06-01-PLAN.md -- Fuse.js search with SearchBar in layout, SearchResults on /search page
 
 ### Phase 7: Tag Discovery
 **Goal**: User can discover articles by tags and find related content
@@ -154,6 +154,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
 | 4. Article Reader | 1/1 | Complete | 2026-02-15 |
 | 5. Category Navigation | 1/1 | Complete | 2026-02-15 |
-| 6. Search Implementation | 0/0 | Not started | - |
+| 6. Search Implementation | 0/1 | Not started | - |
 | 7. Tag Discovery | 0/0 | Not started | - |
 | 8. Design Polish | 0/0 | Not started | - |
