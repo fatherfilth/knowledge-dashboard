@@ -4,21 +4,33 @@ interface StatusBadgeProps {
   status: Status;
 }
 
-export function StatusBadge({ status }: StatusBadgeProps) {
-  const colorClasses = {
-    "in-progress": "bg-yellow-100 text-yellow-800 border-yellow-200",
-    "complete": "bg-green-100 text-green-800 border-green-200",
-    "stable": "bg-blue-100 text-blue-800 border-blue-200",
-  };
+const statusConfig: Record<Status, { classes: string; dotColor: string; label: string }> = {
+  stable: {
+    classes: "border-teal/20 bg-teal/10 text-teal",
+    dotColor: "bg-teal",
+    label: "Stable",
+  },
+  "in-progress": {
+    classes: "border-amber/20 bg-amber/10 text-amber",
+    dotColor: "bg-amber",
+    label: "In Progress",
+  },
+  complete: {
+    classes: "border-complete/20 bg-complete/10 text-complete",
+    dotColor: "bg-complete",
+    label: "Complete",
+  },
+};
 
-  const fallbackClass = "bg-gray-100 text-gray-800 border-gray-200";
-  const statusClass = colorClasses[status] || fallbackClass;
+export function StatusBadge({ status }: StatusBadgeProps) {
+  const config = statusConfig[status] ?? statusConfig.stable;
 
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium ${statusClass}`}
+      className={`inline-flex items-center gap-1.5 rounded-pill border px-3 py-1 text-xs font-medium ${config.classes}`}
     >
-      {status}
+      <span className={`h-1.5 w-1.5 rounded-full ${config.dotColor}`} aria-hidden="true" />
+      {config.label}
     </span>
   );
 }
