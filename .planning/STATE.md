@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 8 of 8 (Design Polish)
-Plan: 3 of 4 completed
-Status: In Progress
-Last activity: 2026-02-15 — Completed plan 08-04: Applied dark theme to all secondary pages (category, search, tag, not-found) and search components with glass effects and teal accents
+Plan: 4 of 4 completed
+Status: Complete
+Last activity: 2026-02-15 — Completed plan 08-03: Redesigned article page with two-column layout (sticky sidebar with TOC, metadata, tags), dark mode prose styling, and category-colored related articles grid
 
-Progress: [█████████░] 91% (10 of 11 phase plans completed)
+Progress: [██████████] 100% (11 of 11 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 10
+- Total plans completed: 11
 - Average duration: 7 min
-- Total execution time: 1.5 hours
+- Total execution time: 1.6 hours
 
 **By Phase:**
 
@@ -34,11 +34,11 @@ Progress: [█████████░] 91% (10 of 11 phase plans completed)
 | 05-category-navigation | 1 | 2 min | 2 min |
 | 06-search-implementation | 1 | 9 min | 9 min |
 | 07-tag-discovery | 1 | 12 min | 12 min |
-| 08-design-polish | 3 | 14 min | 4.7 min |
+| 08-design-polish | 4 | 22 min | 5.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 07-01 (12 min), 08-01 (5 min), 08-02 (2 min), 08-04 (7 min)
-- Trend: Phase 08 continuing - secondary pages dark theme with glass effects and teal accents (7 min)
+- Last 5 plans: 08-01 (5 min), 08-02 (2 min), 08-04 (7 min), 08-03 (8 min)
+- Trend: Phase 08 complete - all design polish tasks finished, article layout redesigned with two-column layout and dark theme (8 min)
 
 *Updated after each plan completion*
 
@@ -96,6 +96,11 @@ Recent decisions affecting current work:
 - [Phase 08-04]: List layout over grid for article listings - Changed from grid to space-y-3 to match horizontal ArticleCard design
 - [Phase 08-04]: min-h-[60vh] for not-found pages - Reduced from min-h-screen to account for navbar height
 - [Phase 08-04]: max-w-7xl for all pages - Increased container width from max-w-5xl for consistency
+- [Phase 08-03]: Hand-rolled TOC extraction with unist-util-visit - Uses existing unified ecosystem dependency instead of remark-extract-toc for smaller bundle size
+- [Phase 08-03]: rehype-slug before rehype-pretty-code in pipeline - Ensures heading IDs are generated before syntax highlighting runs
+- [Phase 08-03]: Sidebar h-fit positioning - Prevents sidebar from stretching to full grid height while maintaining sticky behavior (lg:sticky lg:top-24 lg:h-fit)
+- [Phase 08-03]: Removed backtick decorators from inline code - prose-code:before/after:content-[''] removes Tailwind typography default backticks around inline code
+- [Phase 08-03]: RelatedArticles self-renders cards - Custom compact design with colored top border instead of reusing ArticleCard component
 
 ### Pending Todos
 
@@ -111,6 +116,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 08-04 execution)
-Stopped at: Completed 08-04-PLAN.md, Phase 08 in progress, all secondary pages and search components now use dark theme with glass effects and teal accents
+Last session: 2026-02-15 (plan 08-03 execution)
+Stopped at: Completed 08-03-PLAN.md, Phase 08 complete - all design polish tasks finished
 Resume file: None
