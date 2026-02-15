@@ -10,9 +10,9 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 8 of 8 (Design Polish)
-Plan: 2 of 4 completed
+Plan: 3 of 4 completed
 Status: In Progress
-Last activity: 2026-02-15 — Completed plan 08-02: Homepage redesigned with gradient hero section, 3-column glass category grid, and horizontal article list rows
+Last activity: 2026-02-15 — Completed plan 08-04: Applied dark theme to all secondary pages (category, search, tag, not-found) and search components with glass effects and teal accents
 
 Progress: [█████████░] 91% (10 of 11 phase plans completed)
 
@@ -21,7 +21,7 @@ Progress: [█████████░] 91% (10 of 11 phase plans completed)
 **Velocity:**
 - Total plans completed: 10
 - Average duration: 7 min
-- Total execution time: 1.4 hours
+- Total execution time: 1.5 hours
 
 **By Phase:**
 
@@ -34,11 +34,11 @@ Progress: [█████████░] 91% (10 of 11 phase plans completed)
 | 05-category-navigation | 1 | 2 min | 2 min |
 | 06-search-implementation | 1 | 9 min | 9 min |
 | 07-tag-discovery | 1 | 12 min | 12 min |
-| 08-design-polish | 2 | 7 min | 3.5 min |
+| 08-design-polish | 3 | 14 min | 4.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 06-01 (9 min), 07-01 (12 min), 08-01 (5 min), 08-02 (2 min)
-- Trend: Phase 08 continuing - homepage and ArticleCard redesign with gradient hero and horizontal list rows (2 min)
+- Last 5 plans: 07-01 (12 min), 08-01 (5 min), 08-02 (2 min), 08-04 (7 min)
+- Trend: Phase 08 continuing - secondary pages dark theme with glass effects and teal accents (7 min)
 
 *Updated after each plan completion*
 
@@ -92,6 +92,10 @@ Recent decisions affecting current work:
 - [Phase 08-02]: overflow-clip on category cards - Preserves sticky positioning descendants per 08-RESEARCH.md
 - [Phase 08-02]: Recent articles list sorted by updated date - Shows freshest content without manual curation
 - [Phase 08-02]: ArticleCard as horizontal list row - New design pattern from variant-2-color for scannable browsing
+- [Phase 08-04]: Consistent pill back link pattern - All listing pages use identical pill-shaped back link component for visual consistency
+- [Phase 08-04]: List layout over grid for article listings - Changed from grid to space-y-3 to match horizontal ArticleCard design
+- [Phase 08-04]: min-h-[60vh] for not-found pages - Reduced from min-h-screen to account for navbar height
+- [Phase 08-04]: max-w-7xl for all pages - Increased container width from max-w-5xl for consistency
 
 ### Pending Todos
 
@@ -107,6 +111,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 08-02 execution)
-Stopped at: Completed 08-02-PLAN.md, Phase 08 in progress, homepage and ArticleCard redesigned with gradient hero and horizontal list rows
+Last session: 2026-02-15 (plan 08-04 execution)
+Stopped at: Completed 08-04-PLAN.md, Phase 08 in progress, all secondary pages and search components now use dark theme with glass effects and teal accents
 Resume file: None
