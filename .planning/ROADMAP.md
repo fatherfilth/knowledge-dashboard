@@ -18,7 +18,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
 - [x] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
 - [x] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
-- [ ] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
+- [x] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
 - [ ] **Phase 8: Design Polish** - Dark mode, responsive design, and performance optimization
 
 ## Phase Details
