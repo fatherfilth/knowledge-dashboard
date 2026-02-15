@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { fetchAllArticles, fetchCategoryArticles } from "@/lib/content";
 import { getRelatedArticles } from "@/lib/tags";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import ReactMarkdown from "react-markdown";
 import rehypePrettyCode from "rehype-pretty-code";
 import remarkGfm from "remark-gfm";
 import { ArticleMetadata } from "@/components/ui/ArticleMetadata";
@@ -79,21 +79,17 @@ export default async function ArticlePage({
         <ArticleMetadata article={article} />
 
         <div className="prose prose-gray prose-sm md:prose-base lg:prose-lg max-w-none">
-          <MDXRemote
-            source={article.content}
-            options={{
-              mdxOptions: {
-                format: "md",
-                remarkPlugins: [remarkGfm],
-                rehypePlugins: [
-                  [
-                    rehypePrettyCode,
-                    { theme: "github-dark-dimmed", keepBackground: true },
-                  ],
-                ],
-              },
-            }}
-          />
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[
+              [
+                rehypePrettyCode,
+                { theme: "github-dark-dimmed", keepBackground: true },
+              ],
+            ]}
+          >
+            {article.content}
+          </ReactMarkdown>
         </div>
       </article>
 
