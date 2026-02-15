@@ -2,9 +2,12 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { fetchAllArticles, fetchCategoryArticles } from "@/lib/content";
 import { getRelatedArticles } from "@/lib/tags";
-import ReactMarkdown from "react-markdown";
-import rehypePrettyCode from "rehype-pretty-code";
+import { unified } from "unified";
+import remarkParse from "remark-parse";
 import remarkGfm from "remark-gfm";
+import remarkRehype from "remark-rehype";
+import rehypePrettyCode from "rehype-pretty-code";
+import rehypeStringify from "rehype-stringify";
 import { ArticleMetadata } from "@/components/ui/ArticleMetadata";
 import { RelatedArticles } from "@/components/ui/RelatedArticles";
 
@@ -78,19 +81,23 @@ export default async function ArticlePage({
 
         <ArticleMetadata article={article} />
 
-        <div className="prose prose-gray prose-sm md:prose-base lg:prose-lg max-w-none">
-          <ReactMarkdown
-            remarkPlugins={[remarkGfm]}
-            rehypePlugins={[
-              [
-                rehypePrettyCode,
-                { theme: "github-dark-dimmed", keepBackground: true },
-              ],
-            ]}
-          >
-            {article.content}
-          </ReactMarkdown>
-        </div>
+        <div
+          className="prose prose-gray prose-sm md:prose-base lg:prose-lg max-w-none"
+          dangerouslySetInnerHTML={{
+            __html: String(
+              await unified()
+                .use(remarkParse)
+                .use(remarkGfm)
+                .use(remarkRehype, { allowDangerousHtml: true })
+                .use(rehypePrettyCode, {
+                  theme: "github-dark-dimmed",
+                  keepBackground: true,
+                })
+                .use(rehypeStringify, { allowDangerousHtml: true })
+                .process(article.content)
+            ),
+          }}
+        />
       </article>
 
       <RelatedArticles articles={relatedArticles} />
