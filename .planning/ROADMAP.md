@@ -16,7 +16,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 2: Data Infrastructure** - GitHub API integration with authentication and content parsing
 - [x] **Phase 3: Routing & Static Generation** - App Router structure and build-time page generation
 - [x] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
-- [ ] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
+- [x] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
 - [ ] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
 - [ ] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
 - [ ] **Phase 8: Design Polish** - Dark mode, responsive design, and performance optimization
@@ -96,7 +96,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md -- ArticleCard component and category page upgrade to card grid with date sorting
+- [x] 05-01-PLAN.md -- ArticleCard component and category page upgrade to card grid with date sorting
 
 ### Phase 6: Search Implementation
 **Goal**: User can search across all articles by keyword with fuzzy matching
@@ -153,7 +153,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
 | 4. Article Reader | 1/1 | Complete | 2026-02-15 |
-| 5. Category Navigation | 0/1 | Not started | - |
+| 5. Category Navigation | 1/1 | Complete | 2026-02-15 |
 | 6. Search Implementation | 0/0 | Not started | - |
 | 7. Tag Discovery | 0/0 | Not started | - |
 | 8. Design Polish | 0/0 | Not started | - |
