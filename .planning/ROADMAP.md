@@ -78,10 +78,10 @@ Plans:
   3. Articles show color-coded status badges (in-progress = yellow, complete = green, stable = blue)
   4. Articles display frontmatter metadata (created date, updated date, author, tags)
   5. Article content flows properly on both mobile and desktop
-**Plans**: TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md -- MDX rendering with syntax highlighting, typography, status badges, and metadata display
 
 ### Phase 5: Category Navigation
 **Goal**: User can browse all categories and discover articles through card-based listings
@@ -152,7 +152,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 1. Project Foundation | 2/2 | Complete | 2026-02-14 |
 | 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
-| 4. Article Reader | 0/0 | Not started | - |
+| 4. Article Reader | 0/1 | Not started | - |
 | 5. Category Navigation | 0/0 | Not started | - |
 | 6. Search Implementation | 0/0 | Not started | - |
 | 7. Tag Discovery | 0/0 | Not started | - |
