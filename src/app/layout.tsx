@@ -49,6 +49,9 @@ export default function RootLayout({
               <Link href="/" className="rounded-pill px-4 py-2 text-sm font-medium text-muted transition-colors hover:bg-white/[0.05] hover:text-primary">
                 Home
               </Link>
+              <Link href="/leaderboard" className="rounded-pill px-4 py-2 text-sm font-medium text-muted transition-colors hover:bg-white/[0.05] hover:text-primary">
+                Leaderboard
+              </Link>
               <Link href="/search" className="rounded-pill px-4 py-2 text-sm font-medium text-muted transition-colors hover:bg-white/[0.05] hover:text-primary">
                 Search
               </Link>
