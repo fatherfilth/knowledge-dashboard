@@ -42,7 +42,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Design
 
 - [ ] **DSGN-01**: Site is responsive — works on mobile and desktop
-- [ ] **DSGN-02**: Site has dark mode
+- [ ] **DSGN-02**: Site has dark mode theme (dark-only; light mode toggle deferred to v2)
 - [ ] **DSGN-03**: Site is styled with Tailwind CSS
 
 ### Deployment

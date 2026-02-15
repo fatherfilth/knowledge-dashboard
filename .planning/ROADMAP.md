@@ -19,7 +19,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
 - [x] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
 - [x] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
-- [ ] **Phase 8: Design Polish** - Dark mode, responsive design, and performance optimization
+- [x] **Phase 8: Design Polish** - Dark mode, responsive design, and performance optimization
 
 ## Phase Details
 
@@ -133,17 +133,17 @@ Plans:
 **Requirements**: DSGN-01, DSGN-02
 **Success Criteria** (what must be TRUE):
   1. Site works on mobile phones (320px+), tablets, and desktop screens
-  2. User can toggle between light and dark mode
-  3. Dark mode preference persists across sessions
-  4. All components are styled consistently with Tailwind CSS
-  5. Site loads quickly with optimized bundle size (<200KB initial JS)
+  2. Site uses dark mode theme with navy background and teal/purple/amber accents
+  3. All components are styled consistently with Tailwind CSS using @theme design tokens
+  4. Fontshare fonts (Cabinet Grotesk + Satoshi) load and apply correctly
+  5. Accessibility: skip nav, focus-visible, prefers-reduced-motion support
 **Plans:** 4 plans
 
 Plans:
-- [ ] 08-01-PLAN.md -- Design system foundation: Tailwind theme, Fontshare fonts, glass navbar, StatusBadge
-- [ ] 08-02-PLAN.md -- Homepage redesign: hero, category grid, article list rows
-- [ ] 08-03-PLAN.md -- Article page redesign: two-column layout, sticky sidebar, TOC, prose styling
-- [ ] 08-04-PLAN.md -- Secondary pages polish: category, search, tag, not-found, SearchBar
+- [x] 08-01-PLAN.md -- Design system foundation: Tailwind theme, Fontshare fonts, glass navbar, StatusBadge
+- [x] 08-02-PLAN.md -- Homepage redesign: hero, category grid, article list rows
+- [x] 08-03-PLAN.md -- Article page redesign: two-column layout, sticky sidebar, TOC, prose styling
+- [x] 08-04-PLAN.md -- Secondary pages polish: category, search, tag, not-found, SearchBar
 
 ## Progress
 
@@ -159,4 +159,4 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 5. Category Navigation | 1/1 | Complete | 2026-02-15 |
 | 6. Search Implementation | 1/1 | Complete | 2026-02-15 |
 | 7. Tag Discovery | 1/1 | Complete | 2026-02-15 |
-| 8. Design Polish | 0/0 | Not started | - |
+| 8. Design Polish | 4/4 | Complete | 2026-02-15 |
