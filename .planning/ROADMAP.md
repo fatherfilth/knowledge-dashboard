@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Project Foundation** - Next.js setup, deployment pipeline, and tech stack verification
 - [x] **Phase 2: Data Infrastructure** - GitHub API integration with authentication and content parsing
 - [x] **Phase 3: Routing & Static Generation** - App Router structure and build-time page generation
-- [ ] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
+- [x] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
 - [ ] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
 - [ ] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
 - [ ] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
@@ -81,7 +81,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 04-01-PLAN.md -- MDX rendering with syntax highlighting, typography, status badges, and metadata display
+- [x] 04-01-PLAN.md -- MDX rendering with syntax highlighting, typography, status badges, and metadata display
 
 ### Phase 5: Category Navigation
 **Goal**: User can browse all categories and discover articles through card-based listings
@@ -152,7 +152,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 1. Project Foundation | 2/2 | Complete | 2026-02-14 |
 | 2. Data Infrastructure | 1/1 | Complete | 2026-02-14 |
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
-| 4. Article Reader | 0/1 | Not started | - |
+| 4. Article Reader | 1/1 | Complete | 2026-02-15 |
 | 5. Category Navigation | 0/0 | Not started | - |
 | 6. Search Implementation | 0/0 | Not started | - |
 | 7. Tag Discovery | 0/0 | Not started | - |
