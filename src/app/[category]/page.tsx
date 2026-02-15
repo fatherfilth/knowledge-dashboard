@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { CATEGORIES } from "@/types/content";
 import { fetchCategoryArticles } from "@/lib/content";
+import { ArticleCard } from "@/components/ui/ArticleCard";
 
 export const dynamicParams = false;
 
@@ -31,11 +32,15 @@ export default async function CategoryPage({
   const { category } = await params;
   const articles = await fetchCategoryArticles(category);
 
+  const sortedArticles = [...articles].sort(
+    (a, b) => b.updated.getTime() - a.updated.getTime()
+  );
+
   const capitalizedCategory =
     category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
-    <div className="mx-auto max-w-4xl px-6 py-12">
+    <div className="mx-auto max-w-5xl px-6 py-12">
       <div className="mb-8">
         <Link
           href="/"
@@ -50,31 +55,15 @@ export default async function CategoryPage({
       </h1>
 
       <p className="mb-8 text-lg text-gray-600">
-        {articles.length === 0
+        {sortedArticles.length === 0
           ? "No articles in this category yet"
-          : `${articles.length} ${articles.length === 1 ? "article" : "articles"}`}
+          : `${sortedArticles.length} ${sortedArticles.length === 1 ? "article" : "articles"}`}
       </p>
 
-      {articles.length > 0 && (
-        <div className="space-y-4">
-          {articles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/${category}/${article.slug}`}
-              className="block rounded-lg border border-gray-200 p-4 transition hover:border-gray-300 hover:bg-gray-50"
-            >
-              <h2 className="text-xl font-semibold text-gray-900">
-                {article.title}
-              </h2>
-              <div className="mt-3 flex items-center gap-3 text-sm text-gray-500">
-                <span className="rounded-full bg-gray-100 px-2 py-1 text-xs">
-                  {article.status}
-                </span>
-                {article.tags && article.tags.length > 0 && (
-                  <span>{article.tags.join(", ")}</span>
-                )}
-              </div>
-            </Link>
+      {sortedArticles.length > 0 && (
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          {sortedArticles.map((article) => (
+            <ArticleCard key={article.slug} article={article} />
           ))}
         </div>
       )}
