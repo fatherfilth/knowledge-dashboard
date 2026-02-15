@@ -137,10 +137,13 @@ Plans:
   3. Dark mode preference persists across sessions
   4. All components are styled consistently with Tailwind CSS
   5. Site loads quickly with optimized bundle size (<200KB initial JS)
-**Plans**: TBD
+**Plans:** 4 plans
 
 Plans:
-- [ ] 08-01: TBD
+- [ ] 08-01-PLAN.md -- Design system foundation: Tailwind theme, Fontshare fonts, glass navbar, StatusBadge
+- [ ] 08-02-PLAN.md -- Homepage redesign: hero, category grid, article list rows
+- [ ] 08-03-PLAN.md -- Article page redesign: two-column layout, sticky sidebar, TOC, prose styling
+- [ ] 08-04-PLAN.md -- Secondary pages polish: category, search, tag, not-found, SearchBar
 
 ## Progress
 
