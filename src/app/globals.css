@@ -1,7 +1,182 @@
 @import 'tailwindcss';
 
+@theme {
+  /* Base colors */
+  --color-navy: #0B1120;
+  --color-elevated: #141B2D;
+  --color-glass: rgba(255, 255, 255, 0.05);
+
+  /* Code background */
+  --color-code-bg: #1A2235;
+
+  /* Accent colors */
+  --color-teal: #00E5CC;
+  --color-amber: #FFB347;
+  --color-purple: #8B5CF6;
+
+  /* Text colors */
+  --color-primary: #E2E8F0;
+  --color-muted: #94A3B8;
+
+  /* Category colors */
+  --color-models: #8B5CF6;
+  --color-tools: #00E5CC;
+  --color-skills: #FFB347;
+  --color-repos: #F472B6;
+  --color-agents: #38BDF8;
+  --color-projects: #34D399;
+
+  /* Status colors */
+  --color-complete: #22C55E;
+
+  /* Typography */
+  --font-display: 'Cabinet Grotesk', system-ui, sans-serif;
+  --font-body: 'Satoshi', system-ui, sans-serif;
+
+  /* Border radius */
+  --radius-pill: 100px;
+  --radius-card: 1rem;
+
+  /* Custom breakpoints */
+  --breakpoint-xs: 30rem;
+
+  /* Animation keyframes */
+  --animate-fade-up: fade-up 500ms ease;
+
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @theme inline {
-  --font-sans: var(--font-inter);
+  --font-sans: 'Satoshi', system-ui, sans-serif;
 }
 
 @plugin "@tailwindcss/typography";
+
+/* Background mesh gradient */
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 60% 50% at 10% 20%, rgba(0, 229, 204, 0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 15%, rgba(139, 92, 246, 0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 50% at 50% 80%, rgba(255, 179, 71, 0.04) 0%, transparent 50%);
+}
+
+/* Skip navigation link */
+.skip-nav {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  background: #00E5CC;
+  color: #0B1120;
+  font-weight: 600;
+  border-radius: 0 0 0.5rem 0.5rem;
+  transition: top 200ms ease;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
+/* Prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus-visible global rule */
+:focus-visible {
+  outline: 3px solid #00E5CC;
+  outline-offset: 2px;
+}
+
+/* Prose overrides for dark mode article styling */
+@layer components {
+  .prose h2 {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 3rem;
+    margin-top: 3rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .prose h3 {
+    margin-top: 2rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .prose a {
+    color: #00E5CC;
+    text-decoration: underline;
+  }
+
+  .prose ul > li::marker,
+  .prose ol > li::marker {
+    color: #00E5CC;
+  }
+
+  .prose blockquote {
+    border-left: 4px solid #8B5CF6;
+    background: rgba(139, 92, 246, 0.08);
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+
+  .prose code {
+    color: #00E5CC;
+    background: #1A2235;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 0.125rem 0.25rem;
+  }
+
+  .prose code::before,
+  .prose code::after {
+    content: '';
+  }
+
+  .prose pre {
+    background: #1A2235;
+  }
+
+  .prose pre code {
+    background: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  .prose table thead {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .prose table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .prose {
+    color: #E2E8F0;
+  }
+
+  .prose strong {
+    color: #ffffff;
+  }
+}
