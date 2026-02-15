@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 ## Current Position
 
 Phase: 8 of 8 (Design Polish)
-Plan: 1 of 4 completed
+Plan: 2 of 4 completed
 Status: In Progress
-Last activity: 2026-02-15 — Completed plan 08-01: Design system foundation with Tailwind CSS 4 theme, Cabinet Grotesk/Satoshi fonts, glass navbar, and pill-shaped status badges
+Last activity: 2026-02-15 — Completed plan 08-02: Homepage redesigned with gradient hero section, 3-column glass category grid, and horizontal article list rows
 
-Progress: [█████████░] 82% (9 of 11 phase plans completed)
+Progress: [█████████░] 91% (10 of 11 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
-- Average duration: 8 min
-- Total execution time: 1.3 hours
+- Total plans completed: 10
+- Average duration: 7 min
+- Total execution time: 1.4 hours
 
 **By Phase:**
 
@@ -34,11 +34,11 @@ Progress: [█████████░] 82% (9 of 11 phase plans completed)
 | 05-category-navigation | 1 | 2 min | 2 min |
 | 06-search-implementation | 1 | 9 min | 9 min |
 | 07-tag-discovery | 1 | 12 min | 12 min |
-| 08-design-polish | 1 | 5 min | 5 min |
+| 08-design-polish | 2 | 7 min | 3.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (2 min), 06-01 (9 min), 07-01 (12 min), 08-01 (5 min)
-- Trend: Phase 08 started - design system foundation with Tailwind theme and glass navbar (5 min)
+- Last 5 plans: 06-01 (9 min), 07-01 (12 min), 08-01 (5 min), 08-02 (2 min)
+- Trend: Phase 08 continuing - homepage and ArticleCard redesign with gradient hero and horizontal list rows (2 min)
 
 *Updated after each plan completion*
 
@@ -88,6 +88,10 @@ Recent decisions affecting current work:
 - [Phase 08-01]: Tailwind CSS 4 @theme directive for design tokens - CSS-native configuration is 5x faster than JS config
 - [Phase 08-01]: External Fontshare font loading via CDN - Cabinet Grotesk and Satoshi not available via next/font
 - [Phase 08-01]: Dark-only theme (no light mode toggle) - Reference design only defines dark palette, light mode deferred
+- [Phase 08-02]: Category colors as constant hex mapping - Hardcoded values ensure consistency; avoids dynamic Tailwind class construction which doesn't work with JIT
+- [Phase 08-02]: overflow-clip on category cards - Preserves sticky positioning descendants per 08-RESEARCH.md
+- [Phase 08-02]: Recent articles list sorted by updated date - Shows freshest content without manual curation
+- [Phase 08-02]: ArticleCard as horizontal list row - New design pattern from variant-2-color for scannable browsing
 
 ### Pending Todos
 
@@ -103,6 +107,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 08-01 execution)
-Stopped at: Completed 08-01-PLAN.md, Phase 08 in progress, design system foundation established with dark theme and glass navbar
+Last session: 2026-02-15 (plan 08-02 execution)
+Stopped at: Completed 08-02-PLAN.md, Phase 08 in progress, homepage and ArticleCard redesigned with gradient hero and horizontal list rows
 Resume file: None
