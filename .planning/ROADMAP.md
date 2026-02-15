@@ -17,7 +17,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 3: Routing & Static Generation** - App Router structure and build-time page generation
 - [x] **Phase 4: Article Reader** - MDX rendering with syntax highlighting and status badges
 - [x] **Phase 5: Category Navigation** - Homepage and category browsing with article cards
-- [ ] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
+- [x] **Phase 6: Search Implementation** - Client-side fuzzy search with Fuse.js
 - [ ] **Phase 7: Tag Discovery** - Tag-based browsing and related articles
 - [ ] **Phase 8: Design Polish** - Dark mode, responsive design, and performance optimization
 
@@ -111,7 +111,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 06-01-PLAN.md -- Fuse.js search with SearchBar in layout, SearchResults on /search page
+- [x] 06-01-PLAN.md -- Fuse.js search with SearchBar in layout, SearchResults on /search page
 
 ### Phase 7: Tag Discovery
 **Goal**: User can discover articles by tags and find related content
@@ -154,6 +154,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> 8
 | 3. Routing & Static Generation | 1/1 | Complete | 2026-02-15 |
 | 4. Article Reader | 1/1 | Complete | 2026-02-15 |
 | 5. Category Navigation | 1/1 | Complete | 2026-02-15 |
-| 6. Search Implementation | 0/1 | Not started | - |
+| 6. Search Implementation | 1/1 | Complete | 2026-02-15 |
 | 7. Tag Discovery | 0/0 | Not started | - |
 | 8. Design Polish | 0/0 | Not started | - |
