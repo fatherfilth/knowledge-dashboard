@@ -52,6 +52,10 @@ export async function fetchLeaderboard(): Promise<LeaderboardEntry[]> {
       console.warn("[fetchLeaderboard] data.yaml not found (404)");
       return [];
     }
+    if (error.status === 403) {
+      console.warn("[fetchLeaderboard] GitHub API rate limit exceeded (403)");
+      return [];
+    }
     throw error;
   }
 }
@@ -83,14 +87,16 @@ export const SUBCATEGORY_LABELS: Record<string, string> = {
 };
 
 /**
- * Resolves a doc_link relative path to a dashboard route.
+ * Resolves a doc_link path to a dashboard route.
  *
- * doc_link paths are relative to docs/_leaderboard/data.yaml,
- * e.g. "../tools/cursor.md" → "/tools/cursor"
+ * Handles both formats found in data.yaml:
+ * - "docs/tools/cursor.md" → "/tools/cursor"
+ * - "../tools/cursor.md" → "/tools/cursor"
  */
 export function resolveDocLink(docLink: string): string | null {
-  // Strip leading ../
-  const normalized = docLink.replace(/^\.\.\//, "");
+  if (!docLink) return null;
+  // Strip leading "docs/" or "../"
+  const normalized = docLink.replace(/^(docs\/|\.\.\/)+/, "");
   // Remove .md extension
   const withoutExt = normalized.replace(/\.md$/, "");
   // Should be "category/slug"
