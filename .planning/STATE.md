@@ -2,19 +2,19 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-14)
+See: .planning/PROJECT.md (updated 2026-02-15)
 
 **Core value:** Your brother can quickly find and read any article in your AI documentation library — browsing by category, searching by keyword, or filtering by status and tags.
-**Current focus:** All phases complete — milestone ready for review
+**Current focus:** v1.0 MVP shipped — planning next milestone
 
 ## Current Position
 
-Phase: 8 of 8 (Design Polish)
-Plan: 4 of 4 completed
-Status: Complete
-Last activity: 2026-02-15 — Completed plan 08-03: Redesigned article page with two-column layout (sticky sidebar with TOC, metadata, tags), dark mode prose styling, and category-colored related articles grid
+Milestone: v1.0 MVP — SHIPPED 2026-02-15
+Phases: 8 complete (12 plans total)
+Status: Milestone complete
+Last activity: 2026-02-15 — Shipped v1.0 MVP with category browsing, search, tag discovery, and dark design system
 
-Progress: [██████████] 100% (11 of 11 phase plans completed)
+Progress: [██████████] 100% — v1.0 complete
 
 ## Performance Metrics
 
