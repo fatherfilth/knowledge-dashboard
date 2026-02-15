@@ -9,19 +9,19 @@ See: .planning/PROJECT.md (updated 2026-02-14)
 
 ## Current Position
 
-Phase: 4 of 8 (Article Reader)
+Phase: 5 of 8 (Category Navigation)
 Plan: 1 of 1 completed
 Status: Complete
-Last activity: 2026-02-15 — Completed plan 04-01: MDX rendering with syntax-highlighted code blocks, color-coded status badges (yellow/green/blue), and responsive typography scaling from mobile to desktop
+Last activity: 2026-02-15 — Completed plan 05-01: ArticleCard component with responsive 2-column card grid, date sorting, and rich metadata (status badges, tags with overflow, line-clamped previews)
 
-Progress: [█████░░░░░] 62.5% (5 of 8 phase plans completed)
+Progress: [██████░░░░] 75% (6 of 8 phase plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 5
-- Average duration: 9 min
-- Total execution time: 0.80 hours
+- Total plans completed: 6
+- Average duration: 8 min
+- Total execution time: 0.83 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [█████░░░░░] 62.5% (5 of 8 phase plans completed)
 | 02-data-infrastructure | 1 | 26 min | 26 min |
 | 03-routing-static-generation | 1 | 2 min | 2 min |
 | 04-article-reader | 1 | 4 min | 4 min |
+| 05-category-navigation | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-02 (5 min), 02-01 (26 min), 03-01 (2 min), 04-01 (4 min)
-- Trend: Phase 04 complete - article reader with MDX rendering and syntax highlighting (4 min)
+- Last 5 plans: 02-01 (26 min), 03-01 (2 min), 04-01 (4 min), 05-01 (2 min)
+- Trend: Phase 05 complete - category navigation with card grid and rich metadata (2 min)
 
 *Updated after each plan completion*
 
@@ -68,6 +69,10 @@ Recent decisions affecting current work:
 - rehype-pretty-code with github-dark-dimmed theme — syntax highlighting for code blocks (from 04-01)
 - Tailwind typography plugin via @plugin directive — Tailwind 4 uses CSS-based configuration, not JS config (from 04-01)
 - Responsive prose classes (prose-sm md:prose-base lg:prose-lg) — mobile-first typography scaling (from 04-01)
+- CSS pseudo-element pattern for entire card clickability — accessible pattern where screen readers only read link text, not entire card (from 05-01)
+- Line-clamp with content slice — line-clamp-2 with 300-char slice provides visual truncation with ellipsis (from 05-01)
+- Tags limited to 3 with overflow indicator — prevents layout overflow while showing additional tag count (from 05-01)
+- Clone before sort pattern — spread array before sorting to avoid mutating Next.js cached data (from 05-01)
 
 ### Pending Todos
 
@@ -83,6 +88,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-15 (plan 04-01 execution)
-Stopped at: Completed 04-01-PLAN.md, Phase 04 complete, article reader ready for Phase 05 (Search and Filter)
+Last session: 2026-02-15 (plan 05-01 execution)
+Stopped at: Completed 05-01-PLAN.md, Phase 05 complete, category navigation ready for Phase 06 (Search and Filter)
 Resume file: None
